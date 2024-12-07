@@ -1,0 +1,156 @@
+:root {
+  --color-very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --color-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --color-grayish-blue: hsl(212, 23%, 69%);
+  --color-light-grayish-blue: hsl(210, 46%, 95%);
+  --color-white: hsl(100, 100%, 100%);
+  --border-radius: 10px;
+  --font-weights-500: 500;
+  --font-weights-700: 700;
+  --font-font-family: "Manrope", sans-serif;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-size: 13px;
+  font-family: var(--font-font-family);
+  font-style: normal;
+  color: var(--color-very-dark-grayish-blue);
+  background-color: var(--color-light-grayish-blue);
+}
+main {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  position: relative;
+  max-width: 730px;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    "drawers_image card_content"
+    "drawers_image card_profile";
+  border-radius: var(--border-radius);
+  background-color: var(--color-white);
+}
+
+.drawers_image {
+  overflow: hidden;
+  grid-area: drawers_image;
+}
+.drawers_image > img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: var(--border-radius);
+  border-end-start-radius: var(--border-radius);
+}
+.card_content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  flex-direction: column;
+  gap: 10px;
+  grid-area: card_content;
+}
+.card_profile_img {
+  max-width: 48px;
+  border-radius: 50%;
+  grid-area: card_profile_img;
+}
+.card_profile_title {
+  grid-area: card_profile_title;
+}
+.card_profile_date {
+  grid-area: card_profile_date;
+}
+.card_profile_btn {
+  grid-area: card_profile_btn;
+  z-index: 100;
+}
+
+.btn {
+  border-radius: 50%;
+  max-width: 32px;
+  height: 32px;
+  width: 32px;
+  border-color: transparent;
+}
+.card_profile {
+  width: 100%;
+  display: grid;
+  grid-area: card_profile;
+  grid-template-columns: 50px auto auto;
+  gap: 10px 16px;
+  padding: 16px 40px 16px 40px;
+  align-items: center;
+  grid-template-areas:
+    "cl cl cl card_profile_btn"
+    "cl cl cl card_profile_btn";
+}
+
+.desktop {
+  grid-area: cl;
+  display: grid;
+  grid-template-areas:
+    "card_profile_img card_profile_title card_profile_title"
+    "card_profile_img card_profile_date  card_profile_date";
+}
+
+.popup {
+  width: 100%;
+  background-color: red;
+  visibility: visible;
+  width: fit-content;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  gap: 20px;
+  display: flex;
+  padding: 10px;
+  right: -10px;
+  bottom: 23%;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    margin: 24px;
+  }
+  .drawers_image > img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+  }
+
+  .btn > img {
+    filter: brightness(100);
+  }
+
+  .popup {
+    display: none;
+  }
+}

@@ -1,0 +1,160 @@
+@import url(fonts.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+  --color-primary: hsl(29, 53%, 90%);
+  --color-line: hsl(0, 0%, 88%);
+}
+
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-stone-600);
+  font-family: "Outfit-VariableFont_wght";
+}
+h1,h2 {
+    font-family: "YoungSerif-Regular";
+}
+
+.preparation-time {
+  font-weight: bold;
+  font-family: "YoungSerif-Regular";
+}
+
+
+.main {
+  margin: 124px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  width: 736px;
+  background-color: var(--color-white);
+  border-radius: 25px;
+}
+.content {
+  display: grid;
+  padding: 40px;
+  gap: 20px;
+}
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.title {
+  color: var(--color-stone-900);
+}
+
+li::marker,
+h2,
+.nutrition-table-cell-data {
+  color: var(--color-brown-800);
+}
+
+.preparation {
+  display: grid;
+  gap: 20px;
+  justify-content: start;
+  background-color: var(--color-rose-50);
+  padding: 24px;
+  border-radius: 20px;
+}
+
+ul,
+ol {
+  display: grid;
+  padding-left: 24px;
+  gap: 10px;
+}
+
+.preparation-list > li::marker,
+.preparation > .preparation-time {
+  color: var(--color-rose-800);
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.nutrition-table {
+  display: flex;
+  flex-flow: column nowrap;
+}
+.nutrition-table-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 48px;
+}
+
+.nutrition-table-border-bottom {
+  border-bottom: 1px solid var(--color-line);
+}
+
+.nutrition-table-cell-header {
+  display: flex;
+  flex: 1;
+  text-align: start;
+  padding-left: 30px;
+}
+.nutrition-table-cell-data {
+  display: flex;
+  flex: 1;
+  text-align: start;
+  font-weight: bold;
+}
+
+hr {
+  border: 1px solid var(--color-line);
+}
+.content-data {
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin: 0px 0px;
+    display: grid;
+  }
+  .card {
+    width: 100%;
+    background-color: var(--color-white);
+    min-height: 100dvh;
+    border-radius: 0px;
+  }
+  .content {
+    padding: 0px 0px;
+    gap: 20px;
+  }
+  .content-data {
+    display: grid;
+    gap: 20px;
+    padding: 0px 40px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+}

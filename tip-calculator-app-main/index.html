@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="header">
+        <img src="images/logo.svg" alt="" />
+      </div>
+      <div class="content">
+        <div class="section-data">
+          <section class="section-bill">
+            <label for="bill" class="titles">Bill</label>
+            <div class="container-wrapper">
+              <input type="number" name="bill" id="bill" />
+              <img src="images/icon-dollar.svg" alt="Icon Dollar" />
+            </div>
+          </section>
+          <section class="section-tip">
+            <span class="titles">Select Tip %</span>
+            <div class="tip-buttons">
+              <button class="btn tip tip-value" value="5">5%</button>
+              <button class="btn tip tip-value" value="10">10%</button>
+              <button class="btn tip tip-value tip-active" value="15">
+                15%
+              </button>
+              <button class="btn tip tip-value" value="25">25%</button>
+              <button class="btn tip tip-value" value="50">50%</button>
+              <input
+                type="number"
+                class="tip-custom tip-value"
+                placeholder="Custom"
+              />
+            </div>
+          </section>
+          <section class="section-people">
+            <label for="numer-of-people" class="titles">Number of People</label>
+            <div class="container-wrapper">
+              <input
+                type="number"
+                name="numer-of-people"
+                id="numer-of-people"
+              />
+              <img src="images/icon-person.svg" alt="Icon person" />
+            </div>
+          </section>
+        </div>
+        <section class="section-result">
+          <div class="result-content">
+            <span
+              >Tip Amount <br />
+              <p>/ person</p></span
+            >
+            <h1 id="amount">$0</h1>
+          </div>
+          <div class="result-content">
+            <span
+              >Total <br />
+              <p>/ person</p></span
+            >
+            <h1 id="total">$0</h1>
+          </div>
+          <button type="button" class="btn reset">Reset</button>
+        </section>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

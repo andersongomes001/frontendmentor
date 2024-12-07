@@ -1,0 +1,99 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --color-primary-dark-cyan: hsl(158, 36%, 37%);
+  --color-primary-dark-cyan-hover:hsl(156, 42%, 18%);
+  --color-primary-cream: hsl(30, 38%, 92%);
+  --color-neutral-very-dark-blue: hsl(212, 21%, 14%);
+  --color-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --font-family-fraunces: "Fraunces";
+  --font-family-montserrat: "Montserrat";
+}
+body {
+  background-color: var(--color-primary-cream);
+  font-size: 14px;
+  font-family: var(--font-family-montserrat);
+  color: var(--color-neutral-dark-grayish-blue);
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.card {
+  display: flex;
+  background-color: var(--color-neutral-white);
+  width: 600px;
+  height: 450px;
+  border-radius: 7px;
+}
+
+.perfume-image {
+  border-radius: 7px 0px 0px 7px;
+  content: url("images/image-product-desktop.jpg");
+}
+
+.card-content {
+  display: grid;
+  padding: 32px;
+}
+
+.btn {
+  background-color: var(--color-primary-dark-cyan);
+  color: var(--color-neutral-white);
+  border: 0px solid transparent;
+  border-radius: 4px;
+  /*padding: 5px 5px;*/
+  max-height: 48px;
+  font-weight: bold;
+}
+.btn:hover {
+    background-color: var(--color-primary-dark-cyan-hover);
+}
+.price {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+.price > s {
+    font-size: 12px;
+}
+.price > h2 {
+    color: var(--color-primary-dark-cyan);
+}
+.perfume-start-text {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.card-content > h1 {
+    font-family: var(--font-family-fraunces);
+    color: var(--color-neutral-very-dark-blue);
+}
+
+@media (max-width: 768px) {
+  .perfume-image {
+    border-radius: 7px 7px 0px 0px;
+    content: url("images/image-product-mobile.jpg");
+    width: 100%;
+    height: auto;
+  }
+  .card {
+    display: grid;
+    border-radius: 7px;
+    height: fit-content;
+    margin: 16px;
+  }
+  .card-content {
+    gap: 20px;
+  }
+  .btn {
+    min-height: 48px;
+  }
+  
+}

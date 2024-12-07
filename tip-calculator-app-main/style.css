@@ -1,0 +1,220 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-very-dark-cyan: #04474c;
+  --color-dark-grayish-cyan: #719ca2;
+  --color-grayish-cyan: #27c1ab;
+  --color-light-grayish-cyan: #929494;
+  --color-very-light-grayish-cyan: #e2f1f2;
+  --font-size: 24px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: right;
+
+  color: var(--color-very-dark-cyan);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+
+  border-radius: 6px;
+  border: 1px solid var(--color-very-dark-cyan);
+}
+input {
+  height: 48px;
+  font-size: var(--font-size);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size);
+  background-color: var(--color-dark-grayish-cyan);
+}
+
+.btn {
+  height: 48px;
+  border-radius: 4px;
+  border-style: none;
+  cursor: pointer;
+}
+
+.tip {
+  background-color: var(--color-very-dark-cyan);
+  font-weight: bolder;
+  color: var(--color-white);
+  font-size: var(--font-size);
+}
+.tip-custom {
+  background-color: var(--color-very-light-grayish-cyan);
+  font-weight: bolder;
+  color: var(--color-light-grayish-cyan);
+  font-size: var(--font-size);
+  text-align: center !important;
+  width: 100%;
+}
+
+main {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 34px;
+  padding-top: 34px;
+}
+
+.content {
+  background-color: var(--color-white);
+  display: flex;
+  padding: 32px;
+  border-radius: 24px;
+  gap: 32px;
+  max-width: 920px;
+  min-height: 480px;
+}
+
+.section-result {
+  background-color: var(--color-very-dark-cyan);
+  border-radius: 12px;
+  padding: 22px;
+  color: var(--color-white);
+  font-weight: bolder;
+  max-width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  gap: 32px;
+  overflow: hidden;
+}
+
+button.reset {
+  color: var(--color-very-dark-cyan);
+  background-color: var(--color-grayish-cyan);
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: var(--font-size);
+}
+
+button.reset:disabled {
+  background-color: #0d686d;
+}
+
+.tip-active {
+  background-color: var(--color-grayish-cyan);
+  color: var(--color-very-dark-cyan);
+}
+.btn.tip-value:hover {
+  background-color: var(--color-grayish-cyan);
+  color: var(--color-very-dark-cyan);
+  transform: scale(1.1);
+}
+
+.tip-buttons {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.result-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-grayish-cyan);
+}
+
+.container-wrapper {
+  width: 100%;
+  position: relative;
+}
+.container-wrapper input {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 5%;
+}
+.container-wrapper img {
+  position: relative;
+  top: -40px;
+  left: 5%;
+}
+.section-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+.section-result {
+  width: 100%;
+}
+.section-result span {
+  color: var(--color-white);
+}
+.section-result p {
+  color: var(--color-light-grayish-cyan);
+}
+
+button.reset:hover {
+  transform: scale(1.05);
+}
+
+.titles {
+  color: var(--color-light-grayish-cyan);
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+    height: 100%;
+  }
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 34px;
+    padding-top: 34px;
+  }
+  div.content {
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 24px 24px 0px 0px;
+    height: 100%;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tip-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-result {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="cards">
+        <div class="drawers_image">
+          <img src="images/drawers.jpg" alt="drawers" />
+        </div>
+        <div class="card_content">
+          <h2 class="title">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+
+          <span>
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </span>
+        </div>
+        <div class="card_profile">
+          <div class="desktop cl">
+            <img
+              class="card_profile_img"
+              src="images/avatar-michelle.jpg"
+              alt="avatar-michelle"
+            />
+            <h2 class="card_profile_title">Michelle Appleton</h2>
+            <p class="card_profile_date">28 Jun 2020</p>
+          </div>
+          <div class="desktop-active cl">
+            <div class="share_text">SHARE</div>
+            <div>
+              <img src="images/icon-facebook.svg" alt="" srcset="" />
+            </div>
+            <div>
+              <img src="images/icon-twitter.svg" alt="" srcset="" />
+            </div>
+            <div>
+              <img src="images/icon-pinterest.svg" alt="" srcset="" />
+            </div>
+          </div>
+
+          <button id="popup_btn" class="btn card_profile_btn">
+            <img
+              src="images/icon-share.svg"
+              class="brightness"
+              alt="Share icon"
+            />
+          </button>
+          <div id="popup" class="popup">
+            <div class="share_text">SHARE</div>
+            <div>
+              <img src="images/icon-facebook.svg" alt="" srcset="" />
+            </div>
+            <div>
+              <img src="images/icon-twitter.svg" alt="" srcset="" />
+            </div>
+            <div>
+              <img src="images/icon-pinterest.svg" alt="" srcset="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

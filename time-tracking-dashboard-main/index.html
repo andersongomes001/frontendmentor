@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="report">
+        <div class="data">
+          <img src="images/image-jeremy.png" alt="" srcset="" />
+          <div>
+            <p>Report for</p>
+            <span>Jeremy Robson</span>
+          </div>
+        </div>
+        <ul>
+          <li onclick="changeTimeframe('daily')" id="daily" class="btn active">
+            Daily
+          </li>
+          <li onclick="changeTimeframe('weekly')" id="weekly" class="btn">
+            Weekly
+          </li>
+          <li onclick="changeTimeframe('monthly')" id="monthly" class="btn">
+            Monthly
+          </li>
+        </ul>
+      </div>
+      <div class="work card">
+        <div class="data">
+          <div class="header">
+            <h1>Work</h1>
+            <div class="circles">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="span-hrs">0hrs</span>
+            <span class="last">Last Week - 0hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="play card">
+        <div class="data">
+          <div class="header">
+            <h1>play</h1>
+            <div class="circles">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="span-hrs">0hrs</span>
+            <span class="last">Last Week - 0hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="study card">
+        <div class="data">
+          <div class="header">
+            <h1>study</h1>
+            <div class="circles">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="span-hrs">0hrs</span>
+            <span class="last">Last Week - 0hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="exercise card">
+        <div class="data">
+          <div class="header">
+            <h1>exercise</h1>
+            <div class="circles">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="span-hrs">0hrs</span>
+            <span class="last">Last Week - 0hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="social card">
+        <div class="data">
+          <div class="header">
+            <h1>social</h1>
+            <div class="circles">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="span-hrs">0hrs</span>
+            <span class="last">Last Week - 0hrs</span>
+          </div>
+        </div>
+      </div>
+      <div class="selfcare card">
+        <div class="data">
+          <div class="header">
+            <h1>selfcare</h1>
+            <div class="circles">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="span-hrs">0hrs</span>
+            <span class="last">Last Week - 0hrs</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
