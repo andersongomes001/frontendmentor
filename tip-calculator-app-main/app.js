@@ -33,8 +33,8 @@ window.onload = () => {
     customTipInput.value = "";
     billInput.value = "";
     peopleInput.value = "";
-    amountOutput.textContent = `$0`;
-    totalOutput.textContent = `$0`;
+    amountOutput.textContent = `$0.00`;
+    totalOutput.textContent = `$0.00`;
     resetButton.disabled = true;
   }
 
