@@ -12,6 +12,7 @@
   --color-light-grayish-cyan: #929494;
   --color-very-light-grayish-cyan: #e2f1f2;
   --font-size: 24px;
+  --font-family: "Space Mono", monospace;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -44,6 +45,8 @@ body {
   align-items: center;
   font-size: var(--font-size);
   background-color: var(--color-dark-grayish-cyan);
+  font-family: var(--font-family);
+  font-weight: 700;
 }
 
 .btn {
