@@ -1,0 +1,76 @@
+* {
+  display: 0px;
+  margin: 0xp;
+  box-sizing: border-box;
+}
+:root {
+  --border-radius: 10px;
+  --primary-color: #00adb5;
+  --primary-hover: #007f85;
+
+  --text-primary: #ffffff;
+  --text-secondary: #2e2e2e;
+
+  --button-bg: #ff5722;
+  --button-text: #ffffff;
+  --border-color: #b0d6d9;
+  --background-light: #eeeeee;
+}
+body {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+}
+#app {
+  max-width: 1280px;
+}
+#last-challenges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 24px;
+}
+.challenge-img {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--border-radius) var(--border-radius) 0px 0px;
+}
+.challenge {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--border-radius);
+  border: 3px solid var(--primary-color);
+  height: fit-content;
+  overflow: hidden;
+  padding: -5px;
+  background-color: var(--primary-color);
+  min-height: 220px;
+}
+.challenge:hover {
+  transform: scale(1.1);
+}
+.btn {
+  background-color: var(--secundary-color);
+  padding: 10px 20px 10px 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid transparent;
+  text-decoration: none;
+}
+.challenge-name {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  #last-challenges {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
