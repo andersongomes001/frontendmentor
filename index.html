@@ -3,22 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>All solutions</title>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
   <body>
     <div id="app">
       <h1 class="app-title">All solutions</h1>
+      <!--div class="support-challenges">
+        <button class="support desktop" v-on:click="desktop">
+          Desktop support
+        </button>
+        <button class="support mobile" v-on:click="mobile">
+          Mobile support
+        </button>
+      </div-->
       <div id="last-challenges">
         <div
           class="challenge"
           v-for="challenge in challenges"
           :key="challenge.id"
         >
-          <img
-            class="challenge-img"
-            :src="`assets/images/${challenge.path}.png`"
-          />
+          <div style="overflow: hidden">
+            <img
+              class="challenge-img"
+              :src="`assets/images/${challenge.path}.png`"
+            />
+          </div>
           <span class="challenge-name">{{ challenge.name }}</span>
           <a class="btn" :href="`${challenge.path}/index.html`">Preview</a>
         </div>

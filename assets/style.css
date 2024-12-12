@@ -41,6 +41,7 @@ body {
 .challenge-img {
   height: 100%;
   width: 100%;
+  object-fit: inherit;
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
 }
 .challenge {
@@ -57,10 +58,11 @@ body {
   background-color: var(--primary-color);
   min-height: 220px;
 }
-.challenge:hover {
+.challenge-img:hover {
   transform: scale(1.1);
 }
-.btn {
+.btn,
+.support {
   background-color: var(--secundary-color);
   padding: 10px 20px 10px 20px;
   border-radius: var(--border-radius);
@@ -68,12 +70,17 @@ body {
   color: var(--button-text);
   border: 1px solid transparent;
   text-decoration: none;
+  cursor: pointer;
 }
 .challenge-name {
   font-weight: 700;
 }
 .app-title {
   color: #1c2022;
+}
+.support-challenges {
+  display: flex;
+  gap: 10px;
 }
 
 @media (max-width: 768px) {
