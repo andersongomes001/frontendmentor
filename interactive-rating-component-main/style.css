@@ -1,0 +1,147 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+:root {
+  --primary-orange: #fc7613;
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-light-grey: #262f38;
+  --neutral-dark-blue: #202731;
+  --neutral-very-dark-blue: #141519;
+  --font-family: "Overpass", serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--neutral-very-dark-blue);
+  color: var(--neutral-white);
+  font-family: var(--font-family);
+  font-weight: 400;
+}
+
+main {
+  background-color: var(--neutral-dark-blue);
+  border-radius: 30px;
+  max-width: 410px;
+  max-height: 410px;
+  padding: 30px;
+}
+
+.rating-state-start,
+.thank-you-state-start {
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.thank-you-state-start {
+  align-items: center;
+  text-align: center;
+}
+
+.thank-you-state-start img {
+  max-width: 170px;
+  max-height: 120px;
+  align-self: center;
+}
+.thank-you-state-start span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 30px;
+  width: 190px;
+  background-color: var(--neutral-light-grey);
+  border-radius: 12px;
+}
+
+.btn-submit {
+  background-color: var(--primary-orange);
+  border-radius: 20px;
+  height: 45px;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: var(--neutral-white);
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-light-grey);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  height: 40px;
+  width: 40px;
+  background-color: var(--neutral-light-grey);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: larger;
+  cursor: pointer;
+}
+
+li.active {
+  background-color: var(--neutral-white);
+  color: var(--neutral-very-dark-blue);
+}
+
+li:hover {
+  background-color: var(--primary-orange);
+  color: var(--neutral-very-dark-blue);
+}
+
+.content {
+}
+
+.rating-result {
+  color: var(--primary-orange);
+}
+
+.disable {
+  display: none;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  main {
+    width: fit-content;
+    max-height: fit-content;
+    margin: 24px;
+  }
+
+  .rating-state-start {
+    padding: 0;
+  }
+}
