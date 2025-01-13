@@ -48,6 +48,7 @@ main {
 .thank-you-state-start {
   align-items: center;
   text-align: center;
+  display: none;
 }
 
 .thank-you-state-start img {
