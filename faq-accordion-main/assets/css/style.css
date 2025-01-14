@@ -44,7 +44,7 @@ main {
 .content {
   background-color: var(--color-White);
   height: fit-content;
-  width: 327px;
+  width: 600px;
   padding: 24px;
   border-radius: 8px;
 }
